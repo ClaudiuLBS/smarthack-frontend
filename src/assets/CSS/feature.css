@@ -1,0 +1,21 @@
+.add-feature{
+    background: var(--cw-discord-tent);
+    padding:var(--M-padding);
+}
+
+.add-feature-title{
+    font-size: var(--L-title);
+    font-weight: 700;
+    color: var(--cw-tent);
+}
+
+.add-feature-subtitle{
+    font-size: var(--M-title);
+    color: var(--cw-discord);
+    margin-bottom: var(--S-padding);
+}
+
+.btn-add-feature{
+    background: var(--cw-discord);
+    margin-top: var(--S-padding);
+}

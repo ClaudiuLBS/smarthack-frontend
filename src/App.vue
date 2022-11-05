@@ -1,27 +1,23 @@
 <template>
-  <home-header></home-header>
-  <kick-mute-form-bot></kick-mute-form-bot>
-  <message-form-bot></message-form-bot>
+  <message-feature></message-feature>
+  <kick-feature></kick-feature>
+  <music-feature></music-feature>
   <user-dashboard></user-dashboard>
-  <music-add-form-bot></music-add-form-bot>
 </template>
 
 <script>
-import HomeHeader from './views/HomeHeader.vue';
-import KickMuteFormBot from './views/KickMuteFormBot.vue';
-import MessageFormBot from './views/MessageFormBot.vue';
+import KickFeature from './views/Features/KickFeature.vue';
+import MessageFeature from './views/Features/MessageFeature.vue';
 import UserDashboard from './components/UserDashboard.vue';
-import MusicAddFormBot from './views/MusicAddFormBot.vue';
+import MusicFeature from './views/Features/MusicFeature.vue';
 
 export default {
   name: 'App',
   components: {
-    HomeHeader,
-    MessageFormBot,
+    MessageFeature,
     UserDashboard,
-    KickMuteFormBot,
-    MessageFormBot, 
-    MusicAddFormBot
+    KickFeature,
+    MusicFeature
   }
 }
 </script>
