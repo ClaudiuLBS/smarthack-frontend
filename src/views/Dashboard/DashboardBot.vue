@@ -6,9 +6,12 @@
                 <img src="../../assets/Images/Icons/delete-dark.svg" class="btn-basic" alt="delete" height="24" width="24">
                 <input type="text" placeholder="Bot's token..." class="input-bot medium-title">
             </div>
-
-            <music-feature></music-feature>
-
+            
+            <music-feature v-if="this.getFormStatus == 'music'"></music-feature>
+            <p v-else-if="this.getFormStatus == 'msg'">msg</p>
+            <p v-else-if="this.getFormStatus == 'kick'">kick</p>
+            <p v-else-if="this.getFormStatus == 'ban'">ban</p>
+            <p v-else-if="this.getFormStatus == 'mute'">mute</p>
         </div>
 
         <dashboard-features></dashboard-features>
@@ -23,6 +26,11 @@ export default {
     components:{
         DashboardFeatures,
         MusicFeature
+    },
+    computed: {
+        getFormStatus() {
+            return this.$store.state.currentForm
+        }
     },
     data(){
         return{        

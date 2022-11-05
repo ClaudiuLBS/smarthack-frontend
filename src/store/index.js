@@ -2,7 +2,8 @@ import { createStore } from 'vuex'
 
 export default createStore({
     state:{
-        features: []
+        features: [],
+        currentForm: ""
     },
     mutations:{
         addFeature(state, payload){
@@ -22,6 +23,9 @@ export default createStore({
                     break;
                 }
             }
+        },
+        setCurrentForm(state, payload) {
+            state.currentForm = payload
         }
     },
     actions:{

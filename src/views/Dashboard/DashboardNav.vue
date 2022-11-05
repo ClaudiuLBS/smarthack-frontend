@@ -1,15 +1,15 @@
 <template>
     <div class="dashboard-nav">
         
-        <div class="dashboard-option">
-            <div >
+        <div class="dashboard-option" @click="selectForm('msg')">
+            <div>
                 <img src="../../assets/Images/Icons/message.svg" alt="icon" height="24" width="24">
                 <span class="small-title">Message</span>
             </div>
             <span class="btn-dashboard">+</span>
         </div>
 
-        <div class="dashboard-option">
+        <div class="dashboard-option" @click="selectForm('kick')">
             <div >
                 <img src="../../assets/Images/Icons/forbidden.svg" alt="icon" height="24" width="24">
                 <span class="small-title">Kick</span>
@@ -17,7 +17,7 @@
             <span class="btn-dashboard">+</span>
         </div>
 
-        <div class="dashboard-option">
+        <div class="dashboard-option" @click="selectForm('mute')">
             <div >
                 <img src="../../assets/Images/Icons/forbidden.svg" alt="icon" height="24" width="24">
                 <span class="small-title">Mute</span>
@@ -25,7 +25,7 @@
             <span class="btn-dashboard">+</span>
         </div>
 
-        <div class="dashboard-option">
+        <div class="dashboard-option" @click="selectForm('ban')">
             <div >
                 <img src="../../assets/Images/Icons/forbidden.svg" alt="icon" height="24" width="24">
                 <span class="small-title">Ban</span>
@@ -33,7 +33,7 @@
             <span class="btn-dashboard">+</span>
         </div>
         
-        <div class="dashboard-option">
+        <div class="dashboard-option" @click="selectForm('music')">
             <div>
                 <img src="../../assets/Images/Icons/music.svg" alt="icon" height="24" width="24">
                 <span class="small-title">Music</span>
@@ -50,7 +50,11 @@ import '../../assets/CSS/reset-sheet.css';
 import '../../assets/CSS/root.css';
 
 export default {
-    
+    methods: {
+        selectForm(form_type) {
+            this.$store.commit('setCurrentForm', form_type)
+        }
+    }
 }
 </script>
 
