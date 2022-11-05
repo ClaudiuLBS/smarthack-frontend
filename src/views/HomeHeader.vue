@@ -1,6 +1,5 @@
 <template>
-    <div class="big-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit saepe eaque quam veritatis eum. Consequuntur?</div>
+    <h1>Hello</h1>
 </template>
 
 <script>
@@ -13,5 +12,5 @@ export default {
 </script>
 
 <style scoped>
-
+    
 </style>
