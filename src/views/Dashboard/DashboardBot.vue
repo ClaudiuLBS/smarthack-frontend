@@ -6,9 +6,6 @@
                 <img src="../../assets/Images/Icons/delete-dark.svg" class="btn-basic" alt="delete" height="24" width="24">
                 <input type="text" placeholder="Bot's token..." class="input-bot medium-title">
             </div>
-
-            <music-feature></music-feature>
-
         </div>
 
         <dashboard-features></dashboard-features>

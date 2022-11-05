@@ -1,7 +1,7 @@
 <template>
     <div class="add-feature">
-        <h1 class="add-feature-title">Music:</h1>
-        <h2 class="add-feature-subtitle">Bot will be able to play music in the voice chat</h2>
+        <h1 class="add-feature-title">Ban:</h1>
+        <h2 class="add-feature-subtitle">Bot will ban a user if certain words will be used</h2>
         <p class="description-text">How to use:</p>
 
         <button 
