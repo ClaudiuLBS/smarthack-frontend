@@ -1,14 +1,14 @@
 <template>
-  <home-header></home-header>
+  <user-dashboard></user-dashboard>
 </template>
 
 <script>
-import HomeHeader from './views/HomeHeader.vue';
+import UserDashboard from './components/UserDashboard.vue';
 
 export default {
   name: 'App',
   components: {
-    HomeHeader
+    UserDashboard
   }
 }
 </script>
