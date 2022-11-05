@@ -1,0 +1,32 @@
+/* File that contains root variables and styling */
+/* used in the whole project */
+
+:root{
+    --cw-main: #222831;
+    --cw-second: #393e46;
+    --cw-stroke: #D65A31;
+    --cw-tent: #eeeeee;
+
+    --XL-title: 3rem;
+    --L-title: 2rem;
+    --M-title: 1.5rem;
+    --S-title: 1rem;
+
+    --description-text: 1rem;
+    --caption-text: 0.75rem;
+
+    --L-padding: 1.5rem;
+    --M-padding: 1rem;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+/* STYLE FOR TITLES */
+.big-title{
+    font-size: var(--XL-title);
+    font-weight: 500;
+    margin-bottom: var(--L-padding);
+}
