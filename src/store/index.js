@@ -11,9 +11,12 @@ export default createStore({
 
             state.features.push({
                 id: new_id,
+                user_msg: payload.user_msg,
+                action: payload.action,
+                params: payload.params,
                 name: payload.name,
-                type: payload.type,
-                instruction: payload.instruction
+                when: payload.when,
+                what: payload.what,
             })
         },
         deleteFeature(state, payload){

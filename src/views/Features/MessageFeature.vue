@@ -1,18 +1,18 @@
 <template>
     <div class="add-feature">
-        <h1 class="add-feature-title">Message:</h1>
-        <h2 class="add-feature-subtitle">Send message at a certain hour</h2>
+        <h1 class="add-feature-title">Message</h1>
+        <h2 class="add-feature-subtitle">Send message when an user uses a certan word</h2>
  
-        <h1 class="description-text">Message to be sent</h1>
-        <textarea name="message"></textarea>
-        <h1 class="description-text">Select a time</h1>
-        <input type="time" name="type-to-send">
+        <h1 class="description-text">Message to be sent...</h1>
+        <input type="text" name="bot_msg" v-model="bot_msg"/>
+        <h1 class="description-text">...when this word is used</h1>
+        <input type="text" name="user_msg" v-model="user_msg">
 
-        <p class="caption-text">This message will be repetead daily at this hour.</p>
+        <br>
     
         <button 
             class="btn-basic btn-add-feature"
-            @click="addMusicFeature"
+            @click="addMessageFeature"
         >CREATE</button>
     </div>
 </template>
@@ -23,20 +23,22 @@ import '../../assets/CSS/root.css';
 import '../../assets/CSS/feature.css';
 
 export default {
-    name: 'MusicFeature',
+    name: 'MessageFeature',
     data(){
         return{
-            name: 'Music-Bot',
-            type: 'Music',
-            instruction: 'Bot will be able to play music in the voice chat'
+            bot_msg: "",
+            user_msg: "",
         }
     },
     methods:{
-        addMusicFeature(){
+        addMessageFeature(){
             this.$store.commit('addFeature', {
-                name: this.name,
-                type: this.type,
-                instruction: this.instruction
+                action: this.action,
+                user_msg: this.user_msg,
+                params: [this.bot_msg],
+                name: "Message",
+                when: `When the user types '${this.user_msg}'`,
+                what: `The bot will say '${this.bot_msg}''`
             })
         }
     }

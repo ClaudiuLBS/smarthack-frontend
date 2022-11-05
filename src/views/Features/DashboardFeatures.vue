@@ -15,8 +15,8 @@
                     >
                 </div>
 
-                <p class="feature-type caption-text">{{ feature.type }}</p>
-                <p>{{ feature.instruction }}</p>
+                <p>{{ feature.when }}</p>
+                <p>{{ feature.what }}</p>
             </div>
 
         </div>

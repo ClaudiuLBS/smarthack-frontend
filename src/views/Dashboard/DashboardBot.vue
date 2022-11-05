@@ -8,7 +8,7 @@
             </div>
             
             <music-feature v-if="this.getFormStatus == 'music'"></music-feature>
-            <p v-else-if="this.getFormStatus == 'msg'">msg</p>
+            <message-feature v-else-if="this.getFormStatus == 'msg'"></message-feature>
             <p v-else-if="this.getFormStatus == 'kick'">kick</p>
             <p v-else-if="this.getFormStatus == 'ban'">ban</p>
             <p v-else-if="this.getFormStatus == 'mute'">mute</p>
@@ -21,11 +21,13 @@
 <script>
 import DashboardFeatures from '../Features/DashboardFeatures.vue';
 import MusicFeature from '../Features/MusicFeature.vue';
+import MessageFeature from '../Features/MessageFeature.vue';
 
 export default {
     components:{
         DashboardFeatures,
-        MusicFeature
+        MusicFeature,
+        MessageFeature
     },
     computed: {
         getFormStatus() {
