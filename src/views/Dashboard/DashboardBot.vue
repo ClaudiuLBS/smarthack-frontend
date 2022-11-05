@@ -9,8 +9,8 @@
             
             <music-feature v-if="this.getFormStatus == 'music'"></music-feature>
             <message-feature v-else-if="this.getFormStatus == 'msg'"></message-feature>
-            <p v-else-if="this.getFormStatus == 'kick'">kick</p>
-            <p v-else-if="this.getFormStatus == 'ban'">ban</p>
+            <kick-feature v-else-if="this.getFormStatus == 'kick'">kick</kick-feature>
+            <ban-feature v-else-if="this.getFormStatus == 'ban'"></ban-feature>
             <p v-else-if="this.getFormStatus == 'mute'">mute</p>
         </div>
 
@@ -19,6 +19,8 @@
 </template>
 
 <script>
+import KickFeature from '../Features/KickFeature.vue';
+import BanFeature from '../Features/BanFeature.vue';
 import DashboardFeatures from '../Features/DashboardFeatures.vue';
 import MusicFeature from '../Features/MusicFeature.vue';
 import MessageFeature from '../Features/MessageFeature.vue';
@@ -27,22 +29,15 @@ export default {
     components:{
         DashboardFeatures,
         MusicFeature,
-        MessageFeature
+        MessageFeature,
+        BanFeature,
+        KickFeature
     },
     computed: {
         getFormStatus() {
             return this.$store.state.currentForm
         }
     },
-    data(){
-        return{        
-            features: [{
-                name: 'Music-Bot',
-                type: 'Music',
-                instruction: 'Bot will be able to play music in the voice chat'
-            }]      
-        }
-    }
 }
 </script>
 
