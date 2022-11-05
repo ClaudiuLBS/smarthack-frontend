@@ -1,5 +1,6 @@
 <template>
     <div class="dashboard-nav">
+        
         <div class="dashboard-option">
             <div >
                 <img src="../../assets/Images/Icons/message.svg" alt="icon" height="24" width="24">
@@ -7,19 +8,38 @@
             </div>
             <span class="btn-dashboard">+</span>
         </div>
+
         <div class="dashboard-option">
             <div >
                 <img src="../../assets/Images/Icons/forbidden.svg" alt="icon" height="24" width="24">
-                <span class="small-title">Kick/Mute</span>
+                <span class="small-title">Kick</span>
             </div>
             <span class="btn-dashboard">+</span>
         </div>
+
+        <div class="dashboard-option">
+            <div >
+                <img src="../../assets/Images/Icons/forbidden.svg" alt="icon" height="24" width="24">
+                <span class="small-title">Mute</span>
+            </div>
+            <span class="btn-dashboard">+</span>
+        </div>
+
+        <div class="dashboard-option">
+            <div >
+                <img src="../../assets/Images/Icons/forbidden.svg" alt="icon" height="24" width="24">
+                <span class="small-title">Ban</span>
+            </div>
+            <span class="btn-dashboard">+</span>
+        </div>
+        
         <div class="dashboard-option">
             <div>
                 <img src="../../assets/Images/Icons/music.svg" alt="icon" height="24" width="24">
                 <span class="small-title">Music</span>
             </div>
             <span class="btn-dashboard">+</span>
+        
         </div>
     </div>
 </template>

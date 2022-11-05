@@ -2,15 +2,48 @@
     <div class="dashboard-bot">
 
         <div class="dashboard-new-features">
-            <div class="current-feature-btns">
-                <input type="text" placeholder="Introduce your bot's name..." class="input-bot medium-title">
-                <img src="../../assets/Images/Icons/delete.svg" class="btn-basic" alt="delete" height="24" width="24">
+            <div class="current-feature-btns" style="justify-content: unset">
+                <img src="../../assets/Images/Icons/delete-dark.svg" class="btn-basic" alt="delete" height="24" width="24">
+                <input type="text" placeholder="Bot's token..." class="input-bot medium-title">
+
+                
             </div>
         </div>
 
         <div class="dashboard-current-features">
             <div class="current-features">
-                <div class="medium-title">BotName's features:</div>
+                <div class="medium-title">Features:</div>
+
+                <div class="current-feature">
+                    <div class="current-feature-btns">
+                        <span class="small-title">FEATURE TITLE</span>
+                        <img src="../../assets/Images/Icons/delete.svg" class="btn-basic" alt="delete" height="24" width="24">
+                    </div>
+                    
+                    <p class="feature-type caption-text">Message</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores atque expedita adipisci quibusdam consequatur eveniet perferendis vel fuga at accusamus obcaecati, soluta voluptatibus vero animi optio aut non tempore architecto ipsum rerum. Natus, non. Quaerat voluptatem neque iusto distinctio. Vero doloribus, exercitationem voluptatem cumque architecto itaque aut dolor rerum impedit obcaecati quam pariatur molestiae fugit quod cupiditate deserunt sed quos inventore libero, similique, ipsa provident commodi quia? Error autem placeat architecto corrupti sed necessitatibus libero optio temporibus non provident voluptas officiis nobis est, dolores, iure quisquam delectus debitis dignissimos quas. Neque deserunt vel assumenda aperiam tempore quibusdam velit! Placeat, ipsam.</p>
+                </div>  
+
+                <div class="current-feature">
+                    <div class="current-feature-btns">
+                        <span class="small-title">FEATURE TITLE</span>
+                        <img src="../../assets/Images/Icons/delete.svg" class="btn-basic" alt="delete" height="24" width="24">
+                    </div>
+                    
+                    <p class="feature-type caption-text">Message</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores atque expedita adipisci quibusdam consequatur eveniet perferendis vel fuga at accusamus obcaecati, soluta voluptatibus vero animi optio aut non tempore architecto ipsum rerum. Natus, non. Quaerat voluptatem neque iusto distinctio. Vero doloribus, exercitationem voluptatem cumque architecto itaque aut dolor rerum impedit obcaecati quam pariatur molestiae fugit quod cupiditate deserunt sed quos inventore libero, similique, ipsa provident commodi quia? Error autem placeat architecto corrupti sed necessitatibus libero optio temporibus non provident voluptas officiis nobis est, dolores, iure quisquam delectus debitis dignissimos quas. Neque deserunt vel assumenda aperiam tempore quibusdam velit! Placeat, ipsam.</p>
+                </div>  
+
+                <div class="current-feature">
+                    <div class="current-feature-btns">
+                        <span class="small-title">FEATURE TITLE</span>
+                        <img src="../../assets/Images/Icons/delete.svg" class="btn-basic" alt="delete" height="24" width="24">
+                    </div>
+                    
+                    <p class="feature-type caption-text">Message</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores atque expedita adipisci quibusdam consequatur eveniet perferendis vel fuga at accusamus obcaecati, soluta voluptatibus vero animi optio aut non tempore architecto ipsum rerum. Natus, non. Quaerat voluptatem neque iusto distinctio. Vero doloribus, exercitationem voluptatem cumque architecto itaque aut dolor rerum impedit obcaecati quam pariatur molestiae fugit quod cupiditate deserunt sed quos inventore libero, similique, ipsa provident commodi quia? Error autem placeat architecto corrupti sed necessitatibus libero optio temporibus non provident voluptas officiis nobis est, dolores, iure quisquam delectus debitis dignissimos quas. Neque deserunt vel assumenda aperiam tempore quibusdam velit! Placeat, ipsam.</p>
+                </div>  
+
                 <div class="current-feature">
                     <div class="current-feature-btns">
                         <span class="small-title">FEATURE TITLE</span>
@@ -68,15 +101,23 @@ export default {
         background: var(--cw-bg-tent);
         color: var(--cw-tent);
         padding: var(--M-padding);
-        border-radius: 24px;
+
+        max-height: 75vh;
+        overflow-y: scroll;
     }
     .current-features .medium-title{ margin-bottom: 8px;}
+
+    /* PERSONALIZED SCROLL */
+    .current-features::-webkit-scrollbar { width: 10px;}
+    .current-features::-webkit-scrollbar-track { background: transparent;}    
+    .current-features::-webkit-scrollbar-thumb { background: var(--cw-tent);}
 
     /* EACH FEATURE */
     .current-feature{
         background: var(--cw-stroke);
         padding: var(--S-padding);
         border-radius: 16px;
+        margin-bottom: var(--S-padding);
     }
 
     .current-feature-btns{ display: flex; align-items: center; justify-content: space-between;}
