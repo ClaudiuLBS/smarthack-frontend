@@ -8,10 +8,9 @@
             </div>
             <span class="btn-dashboard">+</span>
         </div>
-
         <div class="dashboard-option">
             <div >
-                <img src="../../assets/Images/Icons/forbidden.svg" alt="icon" height="24" width="24">
+                <img src="../../assets/Images/Icons/door.svg" alt="icon" height="24" width="24">
                 <span class="small-title">Kick</span>
             </div>
             <span class="btn-dashboard">+</span>
@@ -19,7 +18,7 @@
 
         <div class="dashboard-option">
             <div >
-                <img src="../../assets/Images/Icons/forbidden.svg" alt="icon" height="24" width="24">
+                <img src="../../assets/Images/Icons/mute.svg" alt="icon" height="24" width="24">
                 <span class="small-title">Mute</span>
             </div>
             <span class="btn-dashboard">+</span>

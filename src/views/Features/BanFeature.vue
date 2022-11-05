@@ -1,15 +1,9 @@
 <template>
     <div class="add-feature">
-        <h1 class="add-feature-title">Message:</h1>
-        <h2 class="add-feature-subtitle">Send message at a certain hour</h2>
- 
-        <h1 class="description-text">Message to be sent</h1>
-        <textarea name="message"></textarea>
-        <h1 class="description-text">Select a time</h1>
-        <input type="time" name="type-to-send">
+        <h1 class="add-feature-title">Music:</h1>
+        <h2 class="add-feature-subtitle">Bot will be able to play music in the voice chat</h2>
+        <p class="description-text">How to use:</p>
 
-        <p class="caption-text">This message will be repetead daily at this hour.</p>
-    
         <button 
             class="btn-basic btn-add-feature"
             @click="addMusicFeature"
@@ -42,6 +36,3 @@ export default {
     }
 }
 </script>
-
-
-

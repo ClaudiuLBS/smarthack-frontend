@@ -1,6 +1,7 @@
 .add-feature{
     background: var(--cw-discord-tent);
     padding:var(--M-padding);
+    
 }
 
 .add-feature-title{
@@ -18,4 +19,26 @@
 .btn-add-feature{
     background: var(--cw-discord);
     margin-top: var(--S-padding);
+}
+
+/* INPUTS */
+
+.add-feature input,
+.add-feature textarea{
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 16px;
+    border: 2px solid var(--cw-discord);
+    margin: var(--XS-padding) 0;
+    padding: var(--XS-padding);
+    width: 20rem;
+}
+
+.add-feature textarea{
+    resize: none;
+    height: 5rem;
+}
+
+.add-feature input:focus,
+.add-feature textarea:focus{
+    outline: none;
 }
