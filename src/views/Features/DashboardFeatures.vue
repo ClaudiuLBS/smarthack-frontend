@@ -3,15 +3,21 @@
         <div class="current-features">
             <div class="medium-title">Features:</div>
 
-            <div class="current-feature">
+            <div class="current-feature"
+                v-for="feature in features"
+                :key="feature"
+            >
                 <div class="current-feature-btns">
-                    <span class="small-title">FEATURE TITLE</span>
-                    <img src="../../assets/Images/Icons/delete.svg" class="btn-basic" alt="delete" height="24" width="24">
+                    <span class="small-title">{{ feature.name }}</span>
+                    <img 
+                        src="../../assets/Images/Icons/delete.svg" class="btn-basic" alt="delete" height="24" width="24"
+                        @click="deleteFeature(feature.id)"
+                    >
                 </div>
-                
-                <p class="feature-type caption-text">Message</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores atque expedita adipisci quibusdam consequatur eveniet perferendis vel fuga at accusamus obcaecati, soluta voluptatibus vero animi optio aut non tempore architecto ipsum rerum. Natus, non. Quaerat voluptatem neque iusto distinctio. Vero doloribus, exercitationem voluptatem cumque architecto itaque aut dolor rerum impedit obcaecati quam pariatur molestiae fugit quod cupiditate deserunt sed quos inventore libero, similique, ipsa provident commodi quia? Error autem placeat architecto corrupti sed necessitatibus libero optio temporibus non provident voluptas officiis nobis est, dolores, iure quisquam delectus debitis dignissimos quas. Neque deserunt vel assumenda aperiam tempore quibusdam velit! Placeat, ipsam.</p>
-            </div>  
+
+                <p class="feature-type caption-text">{{ feature.type }}</p>
+                <p>{{ feature.instruction }}</p>
+            </div>
 
         </div>
         
@@ -24,9 +30,14 @@
 
 <script>
 export default {
-    data(){
-        return{
-            features: []
+    computed:{
+        features(){
+            return this.$store.state.features
+        }
+    }, 
+    methods:{
+        deleteFeature(ID){
+            this.$store.commit('deleteFeature',{nth_element: ID});
         }
     }
 }

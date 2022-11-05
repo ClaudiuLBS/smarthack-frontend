@@ -23,6 +23,15 @@ export default {
     components:{
         DashboardFeatures,
         MusicFeature
+    },
+    data(){
+        return{        
+            features: [{
+                name: 'Music-Bot',
+                type: 'Music',
+                instruction: 'Bot will be able to play music in the voice chat'
+            }]      
+        }
     }
 }
 </script>
