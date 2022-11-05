@@ -33,7 +33,7 @@ export default {
     methods:{
         addMessageFeature(){
             this.$store.commit('addFeature', {
-                action: this.action,
+                action: 'msg',
                 user_msg: this.user_msg,
                 params: [this.bot_msg],
                 name: "Message",
