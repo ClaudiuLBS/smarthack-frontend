@@ -42,3 +42,11 @@
 .add-feature textarea:focus{
     outline: none;
 }
+
+/* ERROR HANDLING */
+.add-feature
+.isError{
+    border: 2px solid rgb(231, 53, 53);;
+}
+
+.error-text{ color: rgb(231, 53, 53); margin-bottom: var(--XS-padding);}
