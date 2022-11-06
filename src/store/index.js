@@ -24,6 +24,7 @@ export default createStore({
                 when: payload.when,
                 what: payload.what,
             })
+            state.currentForm = ""
         },
         deleteFeature(state, payload){
             for(let i = 0; i < state.features.length; i++){
