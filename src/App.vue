@@ -1,14 +1,17 @@
 <template>
-  <user-dashboard></user-dashboard>
+  <the-navigation></the-navigation>
+  <main>
+    <router-view></router-view>
+  </main>
 </template>
 
 <script>
-import UserDashboard from './components/UserDashboard.vue';
+import TheNavigation from './components/TheNavigation.vue';
 
 export default {
   name: 'App',
   components: {
-    UserDashboard,
+    TheNavigation,
   }
 }
 </script>

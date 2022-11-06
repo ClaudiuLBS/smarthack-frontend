@@ -39,8 +39,8 @@ export default {
                 this.isCompleted = false;
                 this.$store.commit('addFeature', {
                     name: this.name,
-                    instruction: this.forbiddenWord,
-                    when: `When the user types <span class="feature-important">'${this.forbiddenWord}'</span>`,
+                    instruction: this.user_msg,
+                    when: `When the user types <span class="feature-important">'${this.user_msg}'</span>`,
                     what: `He will kicked from the channel`
                 })
             } else {

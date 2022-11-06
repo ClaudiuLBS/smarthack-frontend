@@ -3,12 +3,17 @@ import { createStore } from 'vuex'
 export default createStore({
     state:{
         features: [],
+        featureMusic: false,
         currentForm: ""
     },
     mutations:{
         addFeature(state, payload){
             const new_id = state.features.length;
-
+            
+            if(payload.name === 'Music'){
+                state.featureMusic = true;
+            }
+            
             state.features.push({
                 id: new_id,
                 user_msg: payload.user_msg,
@@ -29,6 +34,9 @@ export default createStore({
         },
         setCurrentForm(state, payload) {
             state.currentForm = payload
+        },
+        setFeatureMusic(state, payload){
+            state.featureMusic = payload
         }
     },
     actions:{

@@ -4,7 +4,7 @@
         <div class="dashboard-new-features">
             <div class="current-feature-btns" style="justify-content: unset">
                 <img src="../../assets/Images/Icons/delete-dark.svg" class="btn-basic" alt="delete" height="24" width="24" @click="clearMessage">
-                <input type="text" placeholder="Bot's token..." class="input-bot medium-title" v-model="userBotLink">
+                <input type="text" placeholder="Bot's token..." class="input-bot medium-title">
             </div>
             
             <music-feature v-if="this.getFormStatus == 'music'"></music-feature>
@@ -40,11 +40,11 @@ export default {
             return this.$store.state.currentForm
         }
     },
-    methods: {
-        clearMessage(){
-            this.userBotLink = "";
-        }
-    }
+    // methods: {
+    //     // clearMessage(){
+    //     //     this.userBotLink = "";
+    //     // }
+    // }
 }
 </script>
 

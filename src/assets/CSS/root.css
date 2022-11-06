@@ -3,7 +3,7 @@
 
 :root{
     --cw-main: #222831;
-    --cw-second: #393e46;
+    --cw-second: #29323e;
     --cw-stroke: #c49ce7;
     --cw-stroke-tent: #620cad;
     --cw-bg-tent: #cdafe7;
@@ -12,8 +12,8 @@
     --cw-discord-tent: #93a6ea;
 
     --XL-title: 3rem;
-    --L-title: 2rem;
-    --M-title: 1.5rem;
+    --L-title: 1.5rem;
+    --M-title: 1.25rem;
     --S-title: 1rem;
 
     --description-text: 1rem;
@@ -35,13 +35,14 @@ body{
 .container{
     padding: 3rem;
     display: flex;
+    flex-direction: column;
 }
 
 /* STYLE FOR TITLES */
 .big-title{
     color: var(--cw-stroke);
     font-size: var(--XL-title);
-    font-weight: 500;
+    font-weight: 700;
     margin-bottom: var(--L-padding);
 }
 

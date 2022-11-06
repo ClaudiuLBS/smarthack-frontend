@@ -11,7 +11,7 @@
                     <span class="small-title">{{ feature.name }}</span>
                     <img 
                         src="../../assets/Images/Icons/delete.svg" class="btn-basic" alt="delete" height="24" width="24"
-                        @click="deleteFeature(feature.id)"
+                        @click="deleteFeature(feature.id, feature.name)"
                     >
                 </div>
 
@@ -36,7 +36,9 @@ export default {
         }
     }, 
     methods:{
-        deleteFeature(ID){
+        deleteFeature(ID, name){
+            if( name === 'Music')
+                this.$store.commit('setFeatureMusic', false);
             this.$store.commit('deleteFeature',{nth_element: ID});
         }
     }

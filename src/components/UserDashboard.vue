@@ -13,7 +13,7 @@ import DashboardBot from '../views/Dashboard/DashboardBot.vue';
 export default {
     components:{
         DashboardNav,
-        DashboardBot
+        DashboardBot,
     }
 }
 </script>
