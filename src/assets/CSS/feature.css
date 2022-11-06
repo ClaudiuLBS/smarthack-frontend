@@ -1,7 +1,7 @@
 .add-feature{
     background: var(--cw-discord-tent);
     padding:var(--M-padding);
-    
+    border-radius: 10px;
 }
 
 .add-feature-title{

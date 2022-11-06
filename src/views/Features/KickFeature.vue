@@ -30,7 +30,6 @@ export default {
         return {
             user_msg: "",
             isCompleted: false,
-            name: 'Kick',
         }
     },
     methods:{
@@ -38,10 +37,12 @@ export default {
             if (this.user_msg) {
                 this.isCompleted = false;
                 this.$store.commit('addFeature', {
-                    name: this.name,
-                    instruction: this.user_msg,
+                    name: 'Kick',
+                    action: 'kick',
+                    user_msg: this.user_msg,
+                    params: [],
                     when: `When the user types <span class="feature-important">'${this.user_msg}'</span>`,
-                    what: `He will kicked from the channel`
+                    what: `He will kicked from the server`
                 })
             } else {
                 this.isCompleted = true;

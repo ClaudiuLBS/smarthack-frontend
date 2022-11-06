@@ -44,10 +44,10 @@ export default {
             if(this.user_msg && this.bot_msg){
                 this.isCompleted = false;
                 this.$store.commit('addFeature', {
-                    action: this.action,
+                    name: 'Message',
+                    action: 'msg',
                     user_msg: this.user_msg,
                     params: [this.bot_msg],
-                    name: "Message",
                     when: `When the user types '${this.user_msg}'`,
                     what: `The bot will say '${this.bot_msg}'`
                 })

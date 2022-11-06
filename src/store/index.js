@@ -4,7 +4,8 @@ export default createStore({
     state:{
         features: [],
         featureMusic: false,
-        currentForm: ""
+        currentForm: "",
+        token: ""
     },
     mutations:{
         addFeature(state, payload){
@@ -32,11 +33,17 @@ export default createStore({
                 }
             }
         },
+        deleteAllFeatures(state) {
+            state.features = []
+        },
         setCurrentForm(state, payload) {
             state.currentForm = payload
         },
         setFeatureMusic(state, payload){
             state.featureMusic = payload
+        },
+        setToken(state, payload) {
+            state.token = payload
         }
     },
     actions:{
