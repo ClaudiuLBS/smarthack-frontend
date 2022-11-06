@@ -66,9 +66,9 @@ export default {
     }
 
     .dashboard-new-features,
-    .dashboard-current-features{ flex: 1;}
+    .dashboard-current-features{ flex: 1;border-radius: 10px;}
 
-    .current-feature-btns{ display: flex; align-items: center; justify-content: space-between;}
+    .current-feature-btns{ display: flex; align-items: center; justify-content: space-between; }
 
     .dashboard-new-features
     .current-feature-btns{ margin-bottom: var(--M-padding); }

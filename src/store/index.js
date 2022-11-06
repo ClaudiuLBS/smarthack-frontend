@@ -28,6 +28,9 @@ export default createStore({
                 }
             }
         },
+        deleteAllFeatures(state) {
+            state.features = []
+        },
         setCurrentForm(state, payload) {
             state.currentForm = payload
         },

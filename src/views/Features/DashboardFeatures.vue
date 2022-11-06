@@ -22,8 +22,8 @@
         </div>
         
         <div class="btns-current-features">
-            <button class="btn-basic btn-create-bot" @click="create">CREATE</button>
-            <button class="btn-basic btn-delete-bot">DELETE</button>
+            <button class="btn-basic btn-create-bot" @click="create">GENERATE</button>
+            <button class="btn-basic btn-delete-bot" @click="deleteAllFeatures">RESET</button>
         </div>
     </div>
 </template>
@@ -51,6 +51,9 @@ export default {
             }
             console.log(data)
             axios.post('http://192.168.22.168:8000/generate-bot', data).then(res => console.log(res)).catch(e => console.log(e))
+        },
+        deleteAllFeatures() {
+            this.$store.commit('deleteAllFeatures')
         }
     }
 }
@@ -69,6 +72,7 @@ export default {
         height: 75vh;
         max-height: 75vh;
         overflow-y: scroll;
+        border-radius: 10px;
     }
     .current-features .medium-title{ margin-bottom: 8px;}
 
