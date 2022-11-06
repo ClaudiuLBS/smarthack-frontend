@@ -50,7 +50,7 @@ export default {
                 token: this.$store.state.token
             }
             console.log(data)
-            axios.post('http://192.168.22.168:8000/generate-bot', data)
+            axios.post('http://192.168.22.168:8000/generate-bot', data).then(res => console.log(res)).catch(e => console.log(e))
         }
     }
 }

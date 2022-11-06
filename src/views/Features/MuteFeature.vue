@@ -6,7 +6,7 @@
         <h1 class="description-text">Select a word:</h1>
         <input 
             type="text" name="type-to-send"
-            v-model="forbiddenWord"
+            v-model="user_msg"
             :class="{ isError: isCompleted}"
         >
 
@@ -33,7 +33,7 @@
         <p class="caption-text">This action will mute users.</p>
         <button 
             class="btn-basic btn-add-feature"
-            @click="addMusicFeature"
+            @click="addMuteFeature"
         >CREATE</button>
     </div>
 </template>
@@ -44,23 +44,26 @@ import '../../assets/CSS/root.css';
 import '../../assets/CSS/feature.css';
 
 export default {
-    name: 'MusicFeature',
-    data(){
+    name: 'MuteFeature',
+    data() {
         return{
             isCompleted: false,
-            name: 'Music-Bot',
-            type: 'Music',
+            days: 0,
+            hours: 0,
+            minutes: 0,
+            seconds: 0
         }
     },
-    methods:{
-        addMusicFeature(){
-            if(this.forbiddenWord){
+    methods: {
+        addMuteFeature() {
+            if(this.user_msg){
                 this.isCompleted = false;
                 this.$store.commit('addFeature', {
-                    name: this.name,
-                    type: this.type,
-                    instruction: this.forbiddenWord,
-                    when: `When the user types <span class="feature-important">'${this.forbiddenWord}'</span>`,
+                    name: 'Mute',
+                    action: 'mute',
+                    user_msg: this.user_msg,
+                    params: [this.days, this.hours, this.minutes, this.seconds],
+                    when: `When the user types <span class="feature-important">'${this.user_msg}'</span>`,
                     what: `It will get muted for <span class="feature-important">${this.days} day(s), ${this.hours} hour(s), ${this.minutes} minute(s), ${this.seconds} second(s)</span>`
                 })
             } else{

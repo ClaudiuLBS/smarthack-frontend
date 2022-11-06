@@ -30,7 +30,6 @@ export default {
         return {
             user_msg: "",
             isCompleted: false,
-            name: 'Ban',
         }
     },
     methods:{
@@ -38,10 +37,12 @@ export default {
             if (this.user_msg) {
                 this.isCompleted = false;
                 this.$store.commit('addFeature', {
-                    name: this.name,
-                    instruction: this.forbiddenWord,
-                    when: `When the user types <span class="feature-important">'${this.forbiddenWord}'</span>`,
-                    what: `He will be BANNED from the channel!`
+                    name: 'Ban',
+                    action: 'ban',
+                    user_msg: this.user_msg,
+                    params: [],
+                    when: `When the user types <span class="feature-important">'${this.user_msg}'</span>`,
+                    what: `He will be BANNED from the server!`
                 })
             } else {
                 this.isCompleted = true;
