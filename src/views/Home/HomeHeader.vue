@@ -9,19 +9,19 @@
             <div class="big-title">Why choose DisBotify?</div>
             <div>
                 <img src="../../assets/Images/Icons/Check.svg" alt="check" height="40" width="40">
-                <span class="medium-title">Easy to use.</span>
+                <span class="medium-title">Intuitive design</span>
             </div>
             <div>
                 <img src="../../assets/Images/Icons/Check.svg" alt="check" height="40" width="40">
-                <span class="medium-title">No programming experience required.</span>
+                <span class="medium-title">Easy to use</span>
             </div>
             <div>
                 <img src="../../assets/Images/Icons/Check.svg" alt="check" height="40" width="40">
-                <span class="medium-title">Free .</span>
+                <span class="medium-title">Instant result</span>
             </div>
             <div>
                 <img src="../../assets/Images/Icons/Check.svg" alt="check" height="40" width="40">
-                <span class="medium-title">Lorem ipsum dolor sit amet.</span>
+                <span class="medium-title">Simple to scale</span>
             </div>
         </div>
         <div class="container-why-right">
@@ -80,9 +80,13 @@ export default {
     .container-why-right{
         flex: 1;
         display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .container-why-right{
         align-items: center;
         justify-content: center;
-        flex-direction: column;
     }
 
     .container-why-left
@@ -90,6 +94,7 @@ export default {
 
     .container-why-left div{ display: flex; align-items: flex-start; margin-bottom: var(--S-padding); width: '100%'; }
     .container-why-left div span{ margin-left: var(--M-padding); color: var(--cw-tent);}
+    .container-why-left div img{ margin-left: var(--L-padding); }
 
     .container-why-right img{ height: auto; width: 75%;}
 
