@@ -11,6 +11,7 @@
             <kick-feature v-else-if="this.getFormStatus == 'kick'">kick</kick-feature>
             <ban-feature v-else-if="this.getFormStatus == 'ban'"></ban-feature>
             <mute-feature v-else-if="this.getFormStatus == 'mute'">mute</mute-feature>
+            <join-feature v-else-if="this.getFormStatus == 'on_join'"></join-feature>
         </div>
 
         <dashboard-features></dashboard-features>
@@ -24,6 +25,7 @@ import BanFeature from '../Features/BanFeature.vue';
 import DashboardFeatures from '../Features/DashboardFeatures.vue';
 import MusicFeature from '../Features/MusicFeature.vue';
 import MessageFeature from '../Features/MessageFeature.vue';
+import JoinFeature from '../Features/JoinFeature.vue';
 
 export default {
     components:{
@@ -32,7 +34,8 @@ export default {
         MessageFeature,
         MuteFeature,
         BanFeature,
-        KickFeature
+        KickFeature,
+        JoinFeature
     },
     data() {
         return {

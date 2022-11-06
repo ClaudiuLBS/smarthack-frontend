@@ -9,15 +9,15 @@
             <div class="big-title">Why choose DisBotify?</div>
             <div>
                 <img src="../../assets/Images/Icons/Check.svg" alt="check" height="40" width="40">
-                <span class="medium-title">Lorem ipsum dolor sit amet.</span>
+                <span class="medium-title">Easy to use.</span>
             </div>
             <div>
                 <img src="../../assets/Images/Icons/Check.svg" alt="check" height="40" width="40">
-                <span class="medium-title">Lorem ipsum dolor sit amet.</span>
+                <span class="medium-title">No programming experience required.</span>
             </div>
             <div>
                 <img src="../../assets/Images/Icons/Check.svg" alt="check" height="40" width="40">
-                <span class="medium-title">Lorem ipsum dolor sit amet.</span>
+                <span class="medium-title">Free .</span>
             </div>
             <div>
                 <img src="../../assets/Images/Icons/Check.svg" alt="check" height="40" width="40">
@@ -88,7 +88,7 @@ export default {
     .container-why-left
     .big-title{ color: var(--cw-tent);}
 
-    .container-why-left div{ display: flex; align-items: center; margin-bottom: var(--S-padding); }
+    .container-why-left div{ display: flex; align-items: flex-start; margin-bottom: var(--S-padding); width: '100%'; }
     .container-why-left div span{ margin-left: var(--M-padding); color: var(--cw-tent);}
 
     .container-why-right img{ height: auto; width: 75%;}

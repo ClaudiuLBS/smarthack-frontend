@@ -8,7 +8,7 @@
     --cw-stroke-tent: #620cad;
     --cw-bg-tent: #c5a0e6;
     --cw-tent: #eeeeee;
-    --cw-discord: #7289da;
+    --cw-discord: #4b64c0;
     --cw-discord-tent: #93a6ea;
 
     --XL-title: 3rem;
@@ -62,7 +62,7 @@ body{
 }
 
 .caption-text{
-    color: gray;
+    color: #000;
     font-size:var(--caption-text);
 }
 

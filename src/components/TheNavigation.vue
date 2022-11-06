@@ -30,6 +30,7 @@ export default {
         display: flex;
         justify-content: space-evenly;
         padding:var(--S-padding) 10%;
+        padding-left: 2rem;
     }
 
     .nav-logo{ flex: 1; display: flex; align-items: center;}

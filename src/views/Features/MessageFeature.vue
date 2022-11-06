@@ -1,6 +1,6 @@
 <template>
     <div class="add-feature">
-        <h1 class="add-feature-title">Message</h1>
+        <h1 class="add-feature-title">Message:</h1>
         <h2 class="add-feature-subtitle">Send message when an user uses a certan word</h2>
  
         <h1 class="description-text">Message to be sent...</h1>
