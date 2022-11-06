@@ -48,8 +48,8 @@ export default {
                     action: 'msg',
                     user_msg: this.user_msg,
                     params: [this.bot_msg],
-                    when: `When the user types '${this.user_msg}'`,
-                    what: `The bot will say '${this.bot_msg}'`
+                    when: `When the user types <span class="feature-important">'${this.user_msg}'</span>`,
+                    what: `The bot will say <span class="feature-important">'${this.bot_msg}'</span>`
                 })
             } else{
                 this.isCompleted = true;
