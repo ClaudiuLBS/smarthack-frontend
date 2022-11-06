@@ -1,6 +1,5 @@
 <template>
     <div class="dashboard-bot">
-
         <div class="dashboard-new-features">
             <div class="current-feature-btns" style="justify-content: unset">
                 <img src="../../assets/Images/Icons/delete-dark.svg" class="btn-basic" alt="delete" height="24" width="24" @click="clearMessage">
@@ -60,6 +59,7 @@ export default {
 
 <style scoped>
     .dashboard-bot{
+        height: calc(100vh -62px) !important;
         flex: 9;
         display: flex;
         padding: var(--S-padding);

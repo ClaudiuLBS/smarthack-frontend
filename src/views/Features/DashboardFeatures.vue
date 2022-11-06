@@ -31,6 +31,7 @@
 </template>
 
 <script>
+
 import axios from 'axios'
 export default {
     computed:{
@@ -79,11 +80,10 @@ export default {
         color: var(--cw-tent);
         padding: var(--M-padding);
         border-radius: 10px;
-        height: 75vh;
+        height: 70vh;
     }
 
     .current-features-inner{
-        max-height: 70vh;
         overflow-y: scroll;
     }
 

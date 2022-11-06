@@ -21,6 +21,6 @@ export default {
 <style scoped>
     .dashboard{
         display: flex;
-        height: 100vh;
+        height: calc(100vh - 62px) !important;
     }
 </style>
