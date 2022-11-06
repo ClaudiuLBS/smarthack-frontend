@@ -39,7 +39,13 @@
                 <span class="small-title">Music</span>
             </div>
             <span class="btn-dashboard">+</span>
-        
+        </div>
+        <div class="dashboard-option" @click="selectForm('on_join')">
+            <div>
+                <img src="../../assets/Images/Icons/message.svg" alt="icon" height="24" width="24">
+                <span class="small-title">Welcome</span>
+            </div>
+            <span class="btn-dashboard">+</span>
         </div>
     </div>
 </template>

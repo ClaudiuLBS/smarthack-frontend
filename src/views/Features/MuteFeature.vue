@@ -3,7 +3,7 @@
         <h1 class="add-feature-title">Mute:</h1>
         <h2 class="add-feature-subtitle">Bot will mute the user for a certain time if he uses a specific word</h2>
 
-        <h1 class="description-text">Select a word:</h1>
+        <h1 class="description-text">Type a word:</h1>
         <input 
             type="text" name="type-to-send"
             v-model="user_msg"
@@ -48,10 +48,11 @@ export default {
     data() {
         return{
             isCompleted: false,
+            user_msg: "",
             days: 0,
             hours: 0,
             minutes: 0,
-            seconds: 0
+            seconds: 0,
         }
     },
     methods: {

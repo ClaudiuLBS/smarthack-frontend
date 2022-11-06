@@ -2,7 +2,6 @@
     <div class="dashboard-current-features">
         <div class="current-features">
             <div class="medium-title">Features:</div>
-
             <div class="current-features-inner">
                 <div class="current-feature"
                     v-for="feature in features"

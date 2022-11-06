@@ -2,7 +2,7 @@
     <form class="add-feature" @submit.prevent="addBanFeature">
         <h1 class="add-feature-title">Ban:</h1>
         <h2 class="add-feature-subtitle">Bot will ban a user if a certain word will be used</h2>
-        <h1 class="description-text">Select a word:</h1>
+        <h1 class="description-text">Type a word:</h1>
         <input 
             type="text" 
             name="type-to-send"
