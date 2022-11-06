@@ -4,7 +4,7 @@
         <div class="dashboard-new-features">
             <div class="current-feature-btns" style="justify-content: unset">
                 <img src="../../assets/Images/Icons/delete-dark.svg" class="btn-basic" alt="delete" height="24" width="24" @click="clearMessage">
-                <input type="text" placeholder="Bot's token..." class="input-bot medium-title" v-model="userBotLink">
+                <input type="text" placeholder="Bot's token..." class="input-bot medium-title" v-model="token" >
             </div>
             
             <music-feature v-if="this.getFormStatus == 'music'"></music-feature>
@@ -35,6 +35,16 @@ export default {
         BanFeature,
         KickFeature
     },
+    data() {
+        return {
+            token: ""
+        }
+    },
+    watch: {
+        token() {
+            this.$store.commit('setToken', this.token)
+        }
+    },
     computed: {
         getFormStatus() {
             return this.$store.state.currentForm
@@ -42,8 +52,8 @@ export default {
     },
     methods: {
         clearMessage(){
-            this.userBotLink = "";
-        }
+            this.token = ""
+        },
     }
 }
 </script>

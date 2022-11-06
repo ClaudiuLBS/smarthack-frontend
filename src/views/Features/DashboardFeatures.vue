@@ -22,22 +22,35 @@
         </div>
         
         <div class="btns-current-features">
-            <button class="btn-basic btn-create-bot">CREATE</button>
+            <button class="btn-basic btn-create-bot" @click="create">CREATE</button>
             <button class="btn-basic btn-delete-bot">DELETE</button>
         </div>
     </div>
 </template>
 
 <script>
+import axios from 'axios'
 export default {
     computed:{
-        features(){
+        features() {
             return this.$store.state.features
+        },
+        jsonFeatures() {
+            const str = JSON.stringify(this.$store.state.features)
+            return  JSON.parse(str)
         }
-    }, 
+    },
     methods:{
         deleteFeature(ID){
             this.$store.commit('deleteFeature',{nth_element: ID});
+        },
+        create() {
+            const data = {
+                features: this.jsonFeatures,
+                token: this.$store.state.token
+            }
+            console.log(data)
+            axios.post('http://192.168.22.168:8000/generate-bot', data)
         }
     }
 }
