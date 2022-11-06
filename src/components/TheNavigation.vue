@@ -1,6 +1,7 @@
 <template>
     <nav>
         <div class="nav-logo">  
+            <img src="../assets/Images/DisBotify.svg" alt="">
             <div class="big-title" style="margin-bottom: 0">DisBotify</div>
         </div>
         <div class="nav-links">
@@ -31,8 +32,8 @@ export default {
         padding:var(--S-padding) 10%;
     }
 
-    .nav-logo{ flex: 1; }
-
+    .nav-logo{ flex: 1; display: flex; align-items: center;}
+    .nav-logo img{ width: 2rem; margin-right: 8px;}
     .nav-logo
     .big-title{ font-size: var(--M-title); margin-bottom: none;}
 

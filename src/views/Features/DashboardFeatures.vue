@@ -3,20 +3,22 @@
         <div class="current-features">
             <div class="medium-title">Features:</div>
 
-            <div class="current-feature"
-                v-for="feature in features"
-                :key="feature"
-            >
-                <div class="current-feature-btns">
-                    <span class="small-title">{{ feature.name }}</span>
-                    <img 
-                        src="../../assets/Images/Icons/delete.svg" class="btn-basic" alt="delete" height="24" width="24"
-                        @click="deleteFeature(feature.id, feature.name)"
-                    >
-                </div>
+            <div class="current-features-inner">
+                <div class="current-feature"
+                    v-for="feature in features"
+                    :key="feature"
+                >
+                    <div class="current-feature-btns">
+                        <span class="small-title">{{ feature.name }}</span>
+                        <img 
+                            src="../../assets/Images/Icons/delete.svg" class="btn-basic" alt="delete" height="24" width="24"
+                            @click="deleteFeature(feature.id, feature.name)"
+                        >
+                    </div>
 
-                <p v-html="feature.when"></p>
-                <p v-html="feature.what"></p>
+                    <p v-html="feature.when"></p>
+                    <p v-html="feature.what"></p>
+                </div>
             </div>
 
         </div>
@@ -51,8 +53,14 @@ export default {
                 features: this.jsonFeatures,
                 token: this.$store.state.token
             }
-            console.log(data)
-            axios.post('http://192.168.22.168:8000/generate-bot', data).then(res => console.log(res)).catch(e => console.log(e))
+
+            axios.post('http://192.168.22.168:8000/generate-bot', data).
+            then(result => {
+                console.log(result);
+            }).
+            catch(error => {
+                console.log(error);
+            })
         },
         deleteAllFeatures() {
             this.$store.commit('deleteAllFeatures')
@@ -70,18 +78,21 @@ export default {
         background: var(--cw-bg-tent);
         color: var(--cw-tent);
         padding: var(--M-padding);
-
-        height: 75vh;
-        max-height: 75vh;
-        overflow-y: scroll;
         border-radius: 10px;
+        height: 75vh;
     }
+
+    .current-features-inner{
+        max-height: 70vh;
+        overflow-y: scroll;
+    }
+
     .current-features .medium-title{ margin-bottom: 8px;}
 
     /* PERSONALIZED SCROLL */
-    .current-features::-webkit-scrollbar { width: 10px;}
-    .current-features::-webkit-scrollbar-track { background: transparent;}    
-    .current-features::-webkit-scrollbar-thumb { background: var(--cw-tent);}
+    .current-features-inner::-webkit-scrollbar { width: 5px;}
+    .current-features-inner::-webkit-scrollbar-track { background: transparent;}    
+    .current-features-inner::-webkit-scrollbar-thumb { background: var(--cw-tent);}
 
     /* EACH FEATURE */
     .current-feature{
