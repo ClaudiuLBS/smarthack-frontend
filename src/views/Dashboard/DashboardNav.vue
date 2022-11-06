@@ -76,7 +76,7 @@ export default {
         transition: 0.4s;
     }
 
-    .dashboard-option:hover{ transform: translateY(-2px);}
+    .dashboard-option:hover{ transform: translateY(-2px); cursor: pointer;}
     .dashboard-option div{  display: flex; align-items: center;}
     .dashboard-option:not(:last-child){ margin-bottom: var(--S-padding); }
     .dashboard-option span{ margin-left: var(--XS-padding); }
@@ -85,6 +85,4 @@ export default {
     .btn-dashboard{
         font-weight: 600;
     }
-
-    .btn-dashboard:hover{ cursor: pointer; }
 </style>

@@ -43,6 +43,10 @@
     outline: none;
 }
 
+.feature-moment{ display: flex;}
+.feature-moment div{ flex: 1;}
+.feature-moment div input{ width: 5rem;}
+
 /* ERROR HANDLING */
 .add-feature
 .isError{
@@ -50,3 +54,7 @@
 }
 
 .error-text{ color: rgb(231, 53, 53); margin-bottom: var(--XS-padding);}
+.feature-important{
+    font-style: italic;
+    font-weight: 500;
+}

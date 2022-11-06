@@ -15,8 +15,8 @@
                     >
                 </div>
 
-                <p>{{ feature.when }}</p>
-                <p>{{ feature.what }}</p>
+                <p v-html="feature.when"></p>
+                <p v-html="feature.what"></p>
             </div>
 
         </div>

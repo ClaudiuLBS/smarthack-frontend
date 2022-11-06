@@ -3,15 +3,15 @@
 
         <div class="dashboard-new-features">
             <div class="current-feature-btns" style="justify-content: unset">
-                <img src="../../assets/Images/Icons/delete-dark.svg" class="btn-basic" alt="delete" height="24" width="24">
-                <input type="text" placeholder="Bot's token..." class="input-bot medium-title">
+                <img src="../../assets/Images/Icons/delete-dark.svg" class="btn-basic" alt="delete" height="24" width="24" @click="clearMessage">
+                <input type="text" placeholder="Bot's token..." class="input-bot medium-title" v-model="userBotLink">
             </div>
             
             <music-feature v-if="this.getFormStatus == 'music'"></music-feature>
             <message-feature v-else-if="this.getFormStatus == 'msg'"></message-feature>
             <kick-feature v-else-if="this.getFormStatus == 'kick'">kick</kick-feature>
             <ban-feature v-else-if="this.getFormStatus == 'ban'"></ban-feature>
-            <p v-else-if="this.getFormStatus == 'mute'">mute</p>
+            <mute-feature v-else-if="this.getFormStatus == 'mute'">mute</mute-feature>
         </div>
 
         <dashboard-features></dashboard-features>
@@ -19,6 +19,7 @@
 </template>
 
 <script>
+import MuteFeature from '../Features/MuteFeature.vue';
 import KickFeature from '../Features/KickFeature.vue';
 import BanFeature from '../Features/BanFeature.vue';
 import DashboardFeatures from '../Features/DashboardFeatures.vue';
@@ -30,6 +31,7 @@ export default {
         DashboardFeatures,
         MusicFeature,
         MessageFeature,
+        MuteFeature,
         BanFeature,
         KickFeature
     },
@@ -38,6 +40,11 @@ export default {
             return this.$store.state.currentForm
         }
     },
+    methods: {
+        clearMessage(){
+            this.userBotLink = "";
+        }
+    }
 }
 </script>
 
@@ -52,13 +59,17 @@ export default {
     .dashboard-current-features{ flex: 1;}
 
     .current-feature-btns{ display: flex; align-items: center; justify-content: space-between;}
-    
+
+    .dashboard-new-features
+    .current-feature-btns{ margin-bottom: var(--M-padding); }
+
     /* NEW FEATURES */
     
     .dashboard-new-features{
         display: flex;
         flex-direction: column;
-        padding: var(--M-padding);
+        padding: var(--S-padding);
+        padding-left: 0;
     }
 
     .input-bot{

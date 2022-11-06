@@ -29,8 +29,7 @@ export default {
     data(){
         return{
             isCompleted: false,
-            name: 'Ban-Bot',
-            type: 'Ban',
+            name: 'Ban',
         }
     },
     methods:{
@@ -39,8 +38,9 @@ export default {
                 this.isCompleted = false;
                 this.$store.commit('addFeature', {
                     name: this.name,
-                    type: this.type,
-                    instruction: this.forbiddenWord
+                    instruction: this.forbiddenWord,
+                    when: `When the user types <span class="feature-important">'${this.forbiddenWord}'</span>`,
+                    what: `He will be BANNED from the channel!`
                 })
             } else{
                 this.isCompleted = true;

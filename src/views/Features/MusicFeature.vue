@@ -20,8 +20,7 @@ export default {
     name: 'MusicFeature',
     data(){
         return{
-            name: 'Music-Bot',
-            type: 'Music',
+            name: 'Music',
             instruction: 'Bot will be able to play music in the voice chat'
         }
     },
@@ -29,7 +28,6 @@ export default {
         addMusicFeature(){
             this.$store.commit('addFeature', {
                 name: this.name,
-                type: this.type,
                 instruction: this.instruction
             })
         }
