@@ -4,7 +4,7 @@
         <div class="dashboard-new-features">
             <div class="current-feature-btns" style="justify-content: unset">
                 <img src="../../assets/Images/Icons/delete-dark.svg" class="btn-basic" alt="delete" height="24" width="24" @click="clearMessage">
-                <input type="text" placeholder="Bot's token..." class="input-bot medium-title" v-model="token" >
+                <input type="text" placeholder="Bot's token..." class="input-bot medium-title" v-model="token">
             </div>
             
             <music-feature v-if="this.getFormStatus == 'music'"></music-feature>
@@ -83,8 +83,10 @@ export default {
     }
 
     .input-bot{
-        widows: 100%;
+        width: 100%;
         padding: var(--S-padding);
         border: none;
+        overflow-x: hidden;
+        border-bottom: 1px solid var(--cw-main);
     }
 </style>
